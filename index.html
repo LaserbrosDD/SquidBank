@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SquidBank</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #FFD700, #b8860b);
+      color: #fff;
+    }
+
+    header {
+      background-color: #ff007f;
+      padding: 1em 2em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.5em;
+      color: #fff;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 2em;
+      font-weight: bold;
+    }
+
+    .sidebar {
+      width: 220px;
+      background-color: #009c9c;
+      position: fixed;
+      top: 64px;
+      bottom: 0;
+      padding: 1.5em;
+      color: #fff;
+    }
+
+    .sidebar a {
+      display: block;
+      margin: 1em 0;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .content {
+      margin-left: 240px;
+      padding: 2em;
+    }
+
+    .balance-box {
+      background-color: rgba(0, 0, 0, 0.3);
+      border: 2px solid magenta;
+      padding: 2em;
+      border-radius: 12px;
+      max-width: 600px;
+      box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+    }
+
+    .balance-box h2 {
+      margin-top: 0;
+      font-size: 1.2em;
+      color: #ffd700;
+      text-transform: uppercase;
+    }
+
+    .balance {
+      font-size: 3em;
+      color: #ff007f;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2em;
+      background: #111;
+      color: #999;
+      margin-top: 2em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>△ ☐ ◇ SquidBank</h1>
+    <nav>
+      <a href="#">Accounts</a>
+      <a href="#">Transfers</a>
+      <a href="#">Support</a>
+      <a href="#">Logout</a>
+    </nav>
+  </header>
+
+  <div class="sidebar">
+    <a href="#">Dashboard</a>
+    <a href="#">My Accounts</a>
+    <a href="#">Transactions</a>
+    <a href="#">Settings</a>
+  </div>
+
+  <main class="content">
+    <div class="balance-box">
+      <h2>Current Account Balance</h2>
+      <div class="balance">₩ 45,600,000,000</div>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 SquidBank Corporation – All Rights Reserved
+  </footer>
+
+</body>
+</html>
