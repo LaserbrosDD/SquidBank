@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SquidBank</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
@@ -14,10 +18,11 @@
 
     header {
       background-color: #ff007f;
-      padding: 1em 2em;
+      padding: 1em;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
     }
 
     header h1 {
@@ -25,23 +30,35 @@
       font-size: 1.5em;
       color: #fff;
       letter-spacing: 2px;
+      flex: 1 1 100%;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1em;
+      margin-top: 0.5em;
     }
 
     nav a {
       color: #fff;
       text-decoration: none;
-      margin-left: 2em;
       font-weight: bold;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
     }
 
     .sidebar {
       width: 220px;
       background-color: #009c9c;
-      position: fixed;
-      top: 64px;
-      bottom: 0;
       padding: 1.5em;
       color: #fff;
+      min-height: 100vh;
     }
 
     .sidebar a {
@@ -53,7 +70,7 @@
     }
 
     .content {
-      margin-left: 240px;
+      flex: 1;
       padding: 2em;
     }
 
@@ -74,9 +91,10 @@
     }
 
     .balance {
-      font-size: 3em;
+      font-size: 2.5em;
       color: #ff007f;
       font-weight: bold;
+      word-wrap: break-word;
     }
 
     footer {
@@ -84,7 +102,33 @@
       padding: 2em;
       background: #111;
       color: #999;
-      margin-top: 2em;
+    }
+
+    /* 📱 Mobile optimierung */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        min-height: auto;
+        padding: 1em;
+        text-align: center;
+      }
+
+      .sidebar a {
+        display: inline-block;
+        margin: 0.5em 1em;
+      }
+
+      .content {
+        padding: 1em;
+      }
+
+      .balance {
+        font-size: 2em;
+      }
     }
   </style>
 </head>
@@ -93,26 +137,28 @@
   <header>
     <h1>△ ☐ ◇ SquidBank</h1>
     <nav>
-      <a href="#">Accounts</a>
-      <a href="#">Transfers</a>
-      <a href="#">Support</a>
-      <a href="#">Logout</a>
+      <a href="https://laserbros.de" target="_blank">Accounts</a>
+      <a href="https://laserbros.de" target="_blank">Transfers</a>
+      <a href="https://laserbros.de" target="_blank">Support</a>
+      <a href="https://laserbros.de" target="_blank">Logout</a>
     </nav>
   </header>
 
-  <div class="sidebar">
-    <a href="#">Dashboard</a>
-    <a href="#">My Accounts</a>
-    <a href="#">Transactions</a>
-    <a href="#">Settings</a>
-  </div>
-
-  <main class="content">
-    <div class="balance-box">
-      <h2>Current Account Balance</h2>
-      <div class="balance">₩ 45,600,000,000</div>
+  <div class="container">
+    <div class="sidebar">
+      <a href="https://laserbros.de" target="_blank">Dashboard</a>
+      <a href="https://laserbros.de" target="_blank">My Accounts</a>
+      <a href="https://laserbros.de" target="_blank">Transactions</a>
+      <a href="https://laserbros.de" target="_blank">Settings</a>
     </div>
-  </main>
+
+    <main class="content">
+      <div class="balance-box">
+        <h2>Current Account Balance</h2>
+        <div class="balance">₩ 45,600,000,000</div>
+      </div>
+    </main>
+  </div>
 
   <footer>
     © 2025 LaserBros – All Rights Reserved
